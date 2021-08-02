@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+/*---------- INITIALIZE SETTINGS ----------*/
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --light_gray: hsl(204, 43%, 93%);
+    --blue_gray: hsl(218, 22%, 67%);
+    --card_radius: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+/*---------- GENERAL CONTENT ----------*/
+
+body {
+    background: var(--light_gray);
+    font-family: 'Karla', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+div.card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    max-width: 50rem;
+    height: 370px;
+    margin: 15.5rem auto 5rem auto;
+    background: white;
+    border-radius: var(--card_radius);
+    box-shadow: 0px 3px 15px #bfbfbf;
+}
+
+div.text-wrapper {
+    width: 85%;
+    margin: auto;
+    padding-top: 3.1rem;
+}
+
+/*---------- JOIN COMMUNITY COMPONENT ----------*/
+
+div.join-community-component {
+    background: white;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+div.join-community-content-wrapper h1 {
+    font-size: 2.5rem;
+    color: var(--cyan);
+    font-weight: 700;
+} 
+
+div.join-community-content-wrapper h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 2.5rem 0 1.4rem 0;
+    color: var(--yellow);
+}
+
+
+div.join-community-content-wrapper p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: hsl(222, 6%, 66%);
+}
+
+/*---------- SECOND ROW COMPONENTS ----------*/
+
+div.card-second-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: inherit;
+    color: white;
+}
+
+div.card-second-row div.text-wrapper {
+    padding-left: 2rem;
+}
+
+div.subscription-component {
+    background: var(--cyan);
+    border-bottom-left-radius: inherit;
+}
+
+div.subscription-component div.subscription-content-wrapper p.price {
+    font-size: 2.5rem;
+    padding: 1rem 0 0.8rem 0;
+}
+
+div.subscription-component div.subscription-content-wrapper p.price span {
+    vertical-align: top;
+    position: relative;
+    top: 0.5rem;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.5);
+}
+
+div.subscription-component div.subscription-content-wrapper p.day-price {
+    opacity: 0.95;
+}
+
+div.subscription-component div.subscription-content-wrapper p {
+    font-size: 1.1rem;
+}
+
+div.subscription-component div.subscription-content-wrapper button {
+    margin-top: 1.8rem;
+    width: 90%;
+    height: 3.5rem;
+    border: none;
+    background: var(--yellow);
+    border-radius: 0.4rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0px 2px 13px rgba(0,0,0,0.37);
+    letter-spacing: 0.1rem;
+}
+
+div.subscription-component div.subscription-content-wrapper h3, 
+div.why-us-component div.why-us-content-wrapper h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+div.why-us-component {
+    background: hsl(179, 47%, 52%);
+    border-bottom-right-radius: inherit;
+}
+
+div.why-us-component div.why-us-content-wrapper ul {
+    list-style-type: none;
+    padding-top: 1rem;
+}
+
+div.why-us-component div.why-us-content-wrapper ul li {
+    font-size: 0.95rem;
+    letter-spacing: 0.04rem;
+    line-height: 1.55rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+div.why-us-component div.why-us-content-wrapper ul li:hover {
+    opacity: 1
+}
+
+
+/*---------- MEDIA QUERIES ----------*/
+
+@media only screen and (max-width: 640px) {
+
+    :root {
+        --card_radius: 0.7rem;
+    }
+    
+    /*----- GENERAL COMPONENTS -----*/
+
+    div.card {
+        width: 30rem;
+        height: 740px;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    /*----- JOIN COMMUNITY COMPONENT -----*/
+    
+    div.join-community-content-wrapper p {
+        font-size: 1.3rem;
+        line-height: 2.1rem;
+    }
+    
+    div.join-community-content-wrapper h2 {
+        font-size: 1.5rem;
+        padding: 2.5rem 0 2rem 0
+    }
+
+    /*----- SECOND ROW COMPONENTS -----*/
+    
+    div.card-second-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        border-radius: 0;
+    }
+
+    div.card-second-row div.text-wrapper {
+        padding-left: 0;
+    }
+    
+    div.subscription-component div.subscription-content-wrapper p {
+        font-size: 1.4rem;
+    }
+
+    div.subscription-component div.subscription-content-wrapper p.price {
+        font-size: 2.7rem;
+        padding: 2rem 0 1.8rem 0;
+    }
+
+    div.subscription-component div.subscription-content-wrapper button {
+        width: 100%;
+        margin-top: 2.5rem;
+        height: 5rem;
+        font-size: 1.3rem;
+        transition: all 0.3s;
+    }
+
+    div.subscription-component div.subscription-content-wrapper button:hover {
+        color: hsl(71, 73%, 54%);
+        background: white;
+    }
+
+    div.subscription-component div.subscription-content-wrapper p.price span {
+        font-size: 1.5rem;
+        top: 0.65rem;
+        padding-left: 0.7rem;
+    }
+
+    div.why-us-component {
+        border-bottom-right-radius: var(--card_radius);
+        border-bottom-left-radius: var(--card_radius);
+    }
+
+    div.why-us-component div.why-us-content-wrapper ul {
+        padding-top: 2rem;
+    }
+
+    div.why-us-component div.why-us-content-wrapper ul li {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+    }
+    
+    div.subscription-component div.subscription-content-wrapper h3, 
+    div.why-us-component div.why-us-content-wrapper h3 {
+        font-size: 1.5rem;
+    }
+
+}
