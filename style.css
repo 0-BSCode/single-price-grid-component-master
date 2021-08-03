@@ -257,3 +257,15 @@ div.why-us-component div.why-us-content-wrapper ul li:hover {
     }
 
 }
+
+@media only screen and (max-width: 368px) {
+
+    :root {
+        font-size: 6px;
+    }
+
+    /*----- GENERAL COMPONENTS -----*/
+    div.card {
+        height: 75rem;
+    }
+}
